@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ejercicio2';
+  nombre: string = '';
+  email: any = '';
+  mensaje: string = '';
+  anti_spam: string = '';
+  registros: Array<object> = [];
+
+  guardar()
+  {
+    if(this.nombre != '' &&  this.email != '' &&  this.mensaje != '' && this.anti_spam == '5')
+    {
+      this.registros.push({nombre: this.nombre, email: this.email, mensaje: this.mensaje});
+    }
+  }
 }
